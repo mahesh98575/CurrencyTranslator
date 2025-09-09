@@ -1,0 +1,100 @@
+body {
+  background: linear-gradient(135deg, #5efce8 0%, #736efe 100%);
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: rgba(255,255,255,0.1);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+  backdrop-filter: blur(9px);
+  padding: 40px 30px;
+  min-width: 340px;
+  text-align: center;
+  animation: swoopIn 1s;
+}
+
+@keyframes swoopIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  color: #3a458c;
+  text-shadow: 0 3px 14px #31efe6c7;
+}
+
+.translator-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  box-shadow: 0 0 10px #8af3ff6b, 0 1.5px 3px #63b3ffd2;
+  transition: box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 15px #24e9c9f2, 0 3px 9px #5ea3ffd2;
+}
+
+.arrow {
+  font-size: 1.8em;
+  color: #5efce8;
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+button {
+  background: linear-gradient(90deg, #31efe6 35%, #736efe 85%);
+  color: white;
+  padding: 15px 0;
+  border-radius: 14px;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 6px 14px #29227239;
+  transition: transform 0.2s, background 0.4s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #38fcae 20%, #3a458c 80%);
+  transform: translateY(-3px) scale(1.06);
+}
+
+.result {
+  margin-top: 16px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #3486ff;
+  min-height: 36px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.result.show {
+  opacity: 1;
+  transform: scale(1.05);
+}
