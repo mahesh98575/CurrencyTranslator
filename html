@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Money Translator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1> Money Translator </h1>
+    <div class="translator-card">
+      <input type="number" id="amount" placeholder="Enter amount" min="1" />
+      <select id="fromCurrency">
+        <option value="USD">&#x1F4B5; USD</option>
+        <option value="INR">&#x20B9; INR</option>
+        <option value="EUR">&#x20AC; EUR</option>
+        <option value="JPY">&#x00A5; JPY</option>
+      </select>
+      <span class="arrow">⇄</span>
+      <select id="toCurrency">
+        <option value="INR">&#x20B9; INR</option>
+        <option value="USD">&#x1F4B5; USD</option>
+        <option value="EUR">&#x20AC; EUR</option>
+        <option value="JPY">&#x00A5; JPY</option>
+      </select>
+      <button id="translateBtn">Translate</button>
+      <div id="result" class="result"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
