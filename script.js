@@ -1,4 +1,4 @@
-// Dummy exchange rates (only for demo—real ones should use an API)
+
 const rates = {
   USD: { INR: 83, EUR: 0.92, JPY: 156 },
   INR: { USD: 0.012, EUR: 0.011, JPY: 1.88 },
@@ -21,7 +21,7 @@ btn.addEventListener('click', () => {
     return;
   }
 
-  // Simulated "animation"
+  
   showResult("Translating...", false);
 
   setTimeout(() => {
@@ -32,7 +32,7 @@ btn.addEventListener('click', () => {
     }
     const converted = (amt * rate).toFixed(2);
     showResult(`💱 ${amt} ${from} = ${converted} ${to}`, false);
-  }, 900); // Animation delay
+  }, 900); 
 });
 
 function showResult(msg, isError) {
